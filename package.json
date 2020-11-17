@@ -6,11 +6,16 @@
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@storybook/addon-actions": "^6.0.28",
+    "@storybook/addon-docs": "^6.0.28",
     "@storybook/addon-essentials": "^6.0.28",
+    "@storybook/addon-knobs": "^6.0.28",
     "@storybook/addon-links": "^6.0.28",
     "@storybook/react": "^6.0.28",
     "babel-loader": "^8.2.1",
-    "react-is": "^17.0.1"
+    "babel-preset-react-app": "^10.0.0",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "react-is": "^17.0.1",
+    "typescript": "^4.0.5"
   },
   "dependencies": {},
   "scripts": {
