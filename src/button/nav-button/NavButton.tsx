@@ -15,7 +15,7 @@ export type NavButtonProps = {
 /** `NavButton` 은 페이지 이동 및 호버 애니메이션을 가진 버튼입니다. */
 function NavButton({ children, width, isSelected, onClick }: NavButtonProps) {
   return (
-    <div css={[areaStyle, { width }]} onMouseO>
+    <div css={[areaStyle, { width }]}>
       <div className="item" css={itemStyle}>
         {children}
       </div>
