@@ -3,9 +3,10 @@ import { jsx, css } from "@emotion/core";
 import Button from "./Button";
 import { withKnobs, text, boolean, select } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
+import Icon from "../../Icon/Icon";
 
 export default {
-  title: "components/Button",
+  title: "components/Button/BasicButton",
   component: Button,
   decorators: [withKnobs],
 };
@@ -45,4 +46,20 @@ export const secondaryButton = () => {
 
 export const tertiaryButton = () => {
   return <Button themeType="tertiary">TERTIARY</Button>;
+};
+
+export const withIcon = () => {
+  return (
+    <div style={{ display: "flex", justifyContent: "space-between" }}>
+      <Button>
+        <Icon icon="community" /> LIKE
+      </Button>
+      <Button>
+        <Icon icon="trophy" /> LIKE
+      </Button>
+      <Button>
+        <Icon icon="gameController" /> LIKE
+      </Button>
+    </div>
+  );
 };
