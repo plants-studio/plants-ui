@@ -14,7 +14,7 @@ export type ButtonProps = {
   width?: string | number;
 };
 
-/** `Button` 은 기본적인 버튼을 위한 컴포넌트입니다. */
+/** `Button` 은 기본적인 버튼입니다. */
 function Button({
   children,
   themeType,

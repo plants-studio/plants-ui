@@ -12,7 +12,7 @@ export default {
 };
 
 export const button = () => {
-  const label = text("children", "BUTTON");
+  const label = text("children", "대회 생성");
   const themeType = select(
     "theme",
     ["primary", "secondary", "tertiary"],
@@ -37,11 +37,11 @@ button.story = {
 };
 
 export const primaryButton = () => {
-  return <Button themeType="primary">PRIMARY</Button>;
+  return <Button themeType="primary">팀 생성</Button>;
 };
 
 export const secondaryButton = () => {
-  return <Button themeType="secondary">SECONDARY</Button>;
+  return <Button themeType="secondary">팀 참가</Button>;
 };
 
 export const tertiaryButton = () => {
