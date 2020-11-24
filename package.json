@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "module": "dist/index.js",
   "license": "MIT",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "/dist"
+  ],
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@storybook/addon-actions": "^6.0.28",
