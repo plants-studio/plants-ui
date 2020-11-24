@@ -12,7 +12,7 @@ export default {
 export const icon = () => {
   const iconType = select(
     "icon",
-    ["community", "trophy", "gameController"],
+    ["community", "trophy", "gameController", "vialSolid"],
     "community"
   );
   const size = text("size", "");
