@@ -1,44 +1,29 @@
 {
   "name": "plants-ui",
-  "version": "1.0.3",
-  "module": "dist/index.js",
+  "version": "1.0.0",
+  "main": "index.js",
   "license": "MIT",
-  "types": "dist/types/index.d.ts",
-  "files": [
-    "/dist"
-  ],
   "devDependencies": {
     "@babel/core": "^7.12.3",
+    "@emotion/core": "^11.0.0",
     "@storybook/addon-actions": "^6.0.28",
     "@storybook/addon-docs": "^6.0.28",
     "@storybook/addon-essentials": "^6.0.28",
     "@storybook/addon-knobs": "^6.0.28",
     "@storybook/addon-links": "^6.0.28",
     "@storybook/react": "^6.0.28",
-    "@svgr/rollup": "^5.5.0",
     "babel-loader": "^8.2.1",
-    "babel-plugin-named-asset-import": "^0.3.7",
     "babel-preset-react-app": "^10.0.0",
     "react-docgen-typescript-loader": "^3.7.2",
     "react-is": "^17.0.1",
-    "rollup": "^2.33.3",
-    "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-url": "^3.0.1",
     "typescript": "^4.0.5"
   },
   "dependencies": {},
   "scripts": {
     "storybook": "start-storybook -p 6006 --no-dll",
-    "build-storybook": "build-storybook --no-dll",
-    "build": "rollup -c",
-    "build:types": "tsc --emitDeclarationOnly"
+    "build-storybook": "build-storybook --no-dll"
   },
   "peerDependencies": {
-    "@emotion/core": "10.1.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "@emotion/core": "^11.0.0"
   }
 }
