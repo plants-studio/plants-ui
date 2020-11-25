@@ -6,15 +6,25 @@ export type CardProps = {
   children: React.ReactNode;
   /** 카드의 너비 */
   width?: string | number;
+  /** 카드의 높이 */
+  height?: string | number;
   /** 카드의 타이틀 */
   cardTitle?: string;
   /** 카드의 padding 여부 */
   isPadding?: boolean;
 };
 
-function Card({ children, width, cardTitle, isPadding = true }: CardProps) {
+function Card({
+  children,
+  width,
+  height,
+  cardTitle,
+  isPadding = true,
+}: CardProps) {
   return (
-    <div css={[defaultStyle, { width }, paddingSelector(isPadding)]}>
+    <div
+      css={[defaultStyle, { width }, { height }, paddingSelector(isPadding)]}
+    >
       {cardTitle != null && <span css={cardTitleStyle}>{cardTitle}</span>}
       {children}
     </div>
