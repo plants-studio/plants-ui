@@ -1,5 +1,8 @@
 declare module '*.mdx';
 
+declare module '*.jpg';
+declare module '*.png'
+
 declare module '*.svg' {
   import * as React from 'react';
 
