@@ -11,17 +11,12 @@ export type HeaderProps = {
 };
 
 /** `Header` 는 기본적인 헤더입니다 */
-function Header({ children, width, size }: HeaderProps) {
-  return <h1 css={[style, sizes[size], { width }]}>{children}</h1>;
+function Header({ children, width, size = "medium" }: HeaderProps) {
+  return <h1 css={[defaultStyle, sizes[size], { width }]}>{children}</h1>;
 }
 
-Header.defaultProps = {
-  size: "medium",
-};
-
-const style = css`
+const defaultStyle = css`
   box-sizing: border-box;
-  height: 2.6rem;
   margin: 0;
   padding: 0;
   font-weight: normal;

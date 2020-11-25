@@ -11,15 +11,11 @@ export type SubHeaderProps = {
 };
 
 /** `SubHeader` 는 보조적인 설명이 있는 헤더입니다 */
-function subHeader({ children, width, size }: SubHeaderProps) {
-  return <h3 css={[style, sizes[size], { width }]}>{children}</h3>;
+function subHeader({ children, width, size = "small" }: SubHeaderProps) {
+  return <h3 css={[defaultStyle, sizes[size], { width }]}>{children}</h3>;
 }
 
-subHeader.defaultProps = {
-  size: "small",
-};
-
-const style = css`
+const defaultStyle = css`
   box-sizing: border-box;
   margin: 0;
   padding: 0;
