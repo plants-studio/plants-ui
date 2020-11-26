@@ -17,7 +17,7 @@ export type ButtonProps = {
 /** `Button` 은 기본적인 버튼입니다. */
 function Button({
   children,
-  themeType,
+  themeType = "primary",
   isDisabled,
   width,
   onClick,
@@ -32,10 +32,6 @@ function Button({
     </button>
   );
 }
-
-Button.defaultProps = {
-  themeType: "primary",
-};
 
 const defaultStyle = css`
   outline: none;

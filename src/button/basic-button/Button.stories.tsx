@@ -51,13 +51,13 @@ export const tertiaryButton = () => {
 export const withIcon = () => {
   return (
     <div style={{ display: "flex", justifyContent: "space-between" }}>
-      <Button>
+      <Button themeType="primary">
         <Icon icon="community" /> LIKE
       </Button>
-      <Button>
+      <Button themeType="primary">
         <Icon icon="trophy" /> LIKE
       </Button>
-      <Button>
+      <Button themeType="primary">
         <Icon icon="gameController" /> LIKE
       </Button>
     </div>
