@@ -5,7 +5,7 @@ export type NavButtonProps = {
   /** 버튼 안의 내용 */
   children: React.ReactNode;
   /** 클릭 시 호출할 함수 */
-  onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void;
+  onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
   /** 버튼의 너비 */
   width?: string | number;
   /** 해당 페이지인지 여부 */
@@ -13,9 +13,17 @@ export type NavButtonProps = {
 };
 
 /** `NavButton` 은 페이지 이동 및 호버 애니메이션을 가진 버튼입니다. */
-function NavButton({ children, width, isSelected, onClick }: NavButtonProps) {
+function NavButton({
+  children,
+  width,
+  isSelected = false,
+  onClick,
+}: NavButtonProps) {
   return (
-    <div css={[areaStyle, { width }]}>
+    <div
+      css={[areaStyle, { width }, focusSelector(isSelected)]}
+      onClick={onClick}
+    >
       <div className="item" css={itemStyle}>
         {children}
       </div>
@@ -63,5 +71,19 @@ const itemStyle = css`
     margin-right: 1em;
   }
 `;
+
+const focusSelector = (props: boolean) =>
+  props
+    ? css`
+        color: #f23c4c;
+        &:hover {
+          background-color: #edf0f7;
+          .item {
+            transform: translateX(8px);
+            color: #f23c4c;
+          }
+        }
+      `
+    : css``;
 
 export default NavButton;
