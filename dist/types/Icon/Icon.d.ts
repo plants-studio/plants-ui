@@ -1,7 +1,5 @@
 /// <reference types="react" />
-import * as icons from "./svg";
-declare type IconType = keyof typeof icons;
-export declare const iconTypes: IconType[];
+import { IconType } from "../util/Type";
 export declare type IconProps = {
     /** 사용 할 아이콘 타입 */
     icon: IconType;

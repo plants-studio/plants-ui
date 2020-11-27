@@ -13,9 +13,4 @@ export declare type ButtonProps = {
 };
 /** `Button` 은 기본적인 버튼입니다. */
 declare function Button({ children, themeType, isDisabled, width, onClick, }: ButtonProps): JSX.Element;
-declare namespace Button {
-    var defaultProps: {
-        themeType: string;
-    };
-}
 export default Button;
