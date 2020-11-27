@@ -17,3 +17,26 @@ export const defaultButton = () => {
     </NavButton>
   );
 };
+
+export const logicButton = () => {
+  return (
+    <NavButton
+      width="200px"
+      onClick={() => {
+        console.log("test");
+      }}
+    >
+      <Icon icon="community" />
+      커뮤니티
+    </NavButton>
+  );
+};
+
+export const selectedButton = () => {
+  return (
+    <NavButton width="200px" isSelected={true}>
+      <Icon icon="community" />
+      커뮤니티
+    </NavButton>
+  );
+};
