@@ -25,7 +25,9 @@ function Card({
     <div
       css={[defaultStyle, { width }, { height }, paddingSelector(isPadding)]}
     >
-      {cardTitle != null && <span css={cardTitleStyle}>{cardTitle}</span>}
+      <div>
+        {cardTitle != null && <span css={cardTitleStyle}>{cardTitle}</span>}
+      </div>
       {children}
     </div>
   );
