@@ -21,22 +21,19 @@ function Progress({
 }: ProgressProps) {
   const background = color;
   return (
-    <div
-      className="area"
-      css={[areaStyle, { width }, { height }, { background }]}
-    >
-      <div className="back" css={[backStyle]}></div>
+    <div className="area" css={[areaStyle, { width }, { height }]}>
       <div
         className="progress"
-        css={[defaultStyle, `width: ${percentage}%;`, { background }]}
+        css={[fillStyle, `width: ${percentage}%;`, { background }]}
       ></div>
+      <div className="back" css={[backStyle, { background }]}></div>
     </div>
   );
 }
 
 const areaStyle = css`
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   border-radius: 2px;
   overflow: hidden;
 `;
@@ -44,13 +41,13 @@ const areaStyle = css`
 const backStyle = css`
   width: 100%;
   height: 100%;
-  background-color: #f23c4c;
+  background: red;
   opacity: 0.3;
 `;
 
-const defaultStyle = css`
+const fillStyle = css`
   height: 100%;
-  background-color: #f23c4c;
+  background: red;
   opacity: 1;
 `;
 
