@@ -25,7 +25,7 @@ const defaultStyle = css`
 
 const sizes = {
   small: css`
-    font-size: 1.125rem;
+    font-size: 1rem;
   `,
 };
 
