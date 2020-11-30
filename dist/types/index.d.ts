@@ -7,4 +7,4 @@ export { default as Sticker } from "./sticker/Sticker";
 export { default as ContentType } from "./text/content-type/ContentType";
 export { default as Header } from "./text/header/Header";
 export { default as SubHeader } from "./text/sub-header/SubHeader";
-export { default as Progress } from "./visibility/progress/Progress.stories";
+export { default as Progress } from "./visibility/progress/Progress";
