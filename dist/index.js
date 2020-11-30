@@ -295,7 +295,7 @@ var Icon = function Icon(_ref) {
 };
 
 function _templateObject$2() {
-  var data = _taggedTemplateLiteral(["\n  outline: none;\n  border: none;\n  box-sizing: border-box;\n  width: 4.5rem;\n  height: 4.5rem;\n  padding: 0;\n  border-radius: 1.5rem;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  background-color: rgba(237, 240, 247, 0.4);\n\n  &:hover {\n    background-color: rgba(237, 240, 247, 1);\n    svg {\n      color: #bdc6d8;\n    }\n  }\n\n  svg {\n    width: 2em;\n    color: #dde3ef;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  outline: none;\n  border: none;\n  box-sizing: border-box;\n  width: 4.5rem;\n  height: 4.5rem;\n  padding: 0;\n  border-radius: 35%;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  background-color: rgba(237, 240, 247, 0.4);\n\n  &:hover {\n    background-color: rgba(237, 240, 247, 1);\n    svg {\n      color: #bdc6d8;\n    }\n  }\n\n  svg {\n    width: 40%;\n    color: #dde3ef;\n  }\n"]);
 
   _templateObject$2 = function _templateObject() {
     return data;
@@ -356,7 +356,7 @@ function _templateObject2$2() {
 }
 
 function _templateObject$3() {
-  var data = _taggedTemplateLiteral(["\n  background-color: white;\n  border-radius: 8px;\n  box-shadow: 0px 6px 25px #d1d5df;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: white;\n  border-radius: 8px;\n  box-shadow: 0px 6px 25px #d1d5df;\n  overflow: hidden;\n"]);
 
   _templateObject$3 = function _templateObject() {
     return data;
@@ -457,7 +457,7 @@ function _templateObject3$3() {
 }
 
 function _templateObject2$3() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 1.25rem;\n  "]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 1.125rem;\n    font-weight: bold;\n  "]);
 
   _templateObject2$3 = function _templateObject2() {
     return data;
@@ -497,7 +497,7 @@ var sizes = {
 };
 
 function _templateObject2$4() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 1.125rem;\n  "]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 1rem;\n  "]);
 
   _templateObject2$4 = function _templateObject2() {
     return data;
