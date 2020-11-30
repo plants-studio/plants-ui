@@ -16,7 +16,7 @@ export const subHeader = () => {
       "총 10,000 RP 규모의 상금과 “고춘이 그자체” 칭호를 위해 도전하세요!"
   );
   const size = select("size", ["small"], "small");
-  const width = text("width", "20%");
+  const width = text("width", "");
   return (
     <SubHeader size={size} width={width}>
       {content}
