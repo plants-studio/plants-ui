@@ -35,6 +35,7 @@ const defaultStyle = css`
   background-color: white;
   border-radius: 8px;
   box-shadow: 0px 6px 25px #d1d5df;
+  overflow: hidden;
 `;
 
 const cardTitleStyle = css`
