@@ -546,7 +546,7 @@ var sizes$1 = {
 };
 
 function _templateObject3$4() {
-  var data = _taggedTemplateLiteral(["\n  position: relative;\n  bottom: 0.5rem;\n  height: 100%;\n  background-color: #f23c4c;\n  opacity: 1;\n"]);
+  var data = _taggedTemplateLiteral(["\n  height: 100%;\n  background-color: #f23c4c;\n  opacity: 1;\n"]);
 
   _templateObject3$4 = function _templateObject3() {
     return data;
@@ -566,7 +566,7 @@ function _templateObject2$5() {
 }
 
 function _templateObject$8() {
-  var data = _taggedTemplateLiteral(["\n  height: 0.5rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row-reverse;\n  border-radius: 2px;\n  overflow: hidden;\n"]);
 
   _templateObject$8 = function _templateObject() {
     return data;
@@ -582,18 +582,22 @@ function Progress(_ref) {
       _ref$width = _ref.width,
       width = _ref$width === void 0 ? "100%" : _ref$width,
       _ref$color = _ref.color,
-      color = _ref$color === void 0 ? "#f23c4c" : _ref$color;
+      color = _ref$color === void 0 ? "#f23c4c" : _ref$color,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? "0.5rem" : _ref$height;
   var background = color;
   return jsx("div", {
     className: "area",
     css: [areaStyle$1, {
       width: width
+    }, {
+      height: height
+    }, {
+      background: background
     }]
   }, jsx("div", {
     className: "back",
-    css: [backStyle, {
-      background: background
-    }]
+    css: [backStyle]
   }), jsx("div", {
     className: "progress",
     css: [defaultStyle$7, "width: ".concat(percentage, "%;"), {
