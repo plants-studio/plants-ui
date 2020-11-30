@@ -391,7 +391,7 @@ var paddingSelector = function paddingSelector(props) {
 };
 
 function _templateObject$4() {
-  var data = _taggedTemplateLiteral(["\n  padding: 0.25rem 0.5rem;\n  width: max-content;\n  word-break: keep-all;\n  border-radius: 4px;\n  font-size: 1.125rem;\n  font-weight: bold;\n  color: white;\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  padding: 0.25rem 0.5rem;\n  width: max-content;\n  word-break: keep-all;\n  border-radius: 4px;\n  font-size: 1rem;\n  font-weight: bold;\n  color: white;\n"]);
 
   _templateObject$4 = function _templateObject() {
     return data;
@@ -403,10 +403,22 @@ function _templateObject$4() {
 function Sticker(_ref) {
   var children = _ref.children,
       _ref$backgroundColor = _ref.backgroundColor,
-      backgroundColor = _ref$backgroundColor === void 0 ? "gray" : _ref$backgroundColor;
+      backgroundColor = _ref$backgroundColor === void 0 ? "gray" : _ref$backgroundColor,
+      top = _ref.top,
+      left = _ref.left,
+      right = _ref.right,
+      bottom = _ref.bottom;
   return jsx("div", {
     css: [defaultStyle$3, {
       backgroundColor: backgroundColor
+    }, {
+      top: top
+    }, {
+      left: left
+    }, {
+      right: right
+    }, {
+      bottom: bottom
     }]
   }, children);
 }
