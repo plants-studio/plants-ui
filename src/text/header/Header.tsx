@@ -48,6 +48,7 @@ const sizes = {
   small: css`
     font-size: 1rem;
     font-weight: bold;
+    line-height: 1.3;
   `,
   medium: css`
     font-size: 1.125rem;
