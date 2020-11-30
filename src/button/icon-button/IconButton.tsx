@@ -30,7 +30,7 @@ const defaultStyle = css`
   width: 4.5rem;
   height: 4.5rem;
   padding: 0;
-  border-radius: 1.5rem;
+  border-radius: 35%;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -44,7 +44,7 @@ const defaultStyle = css`
   }
 
   svg {
-    width: 2em;
+    width: 40%;
     color: #dde3ef;
   }
 `;
