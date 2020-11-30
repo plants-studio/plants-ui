@@ -546,7 +546,7 @@ var sizes$1 = {
 };
 
 function _templateObject3$4() {
-  var data = _taggedTemplateLiteral(["\n  height: 100%;\n  background-color: #f23c4c;\n  opacity: 1;\n"]);
+  var data = _taggedTemplateLiteral(["\n  height: 100%;\n  background: red;\n  opacity: 1;\n"]);
 
   _templateObject3$4 = function _templateObject3() {
     return data;
@@ -556,7 +556,7 @@ function _templateObject3$4() {
 }
 
 function _templateObject2$5() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 100%;\n  background-color: #f23c4c;\n  opacity: 0.3;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 100%;\n  background: red;\n  opacity: 0.3;\n"]);
 
   _templateObject2$5 = function _templateObject2() {
     return data;
@@ -566,7 +566,7 @@ function _templateObject2$5() {
 }
 
 function _templateObject$8() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row-reverse;\n  border-radius: 2px;\n  overflow: hidden;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  border-radius: 2px;\n  overflow: hidden;\n"]);
 
   _templateObject$8 = function _templateObject() {
     return data;
@@ -592,15 +592,15 @@ function Progress(_ref) {
       width: width
     }, {
       height: height
-    }, {
-      background: background
     }]
   }, jsx("div", {
-    className: "back",
-    css: [backStyle]
-  }), jsx("div", {
     className: "progress",
-    css: [defaultStyle$7, "width: ".concat(percentage, "%;"), {
+    css: [fillStyle, "width: ".concat(percentage, "%;"), {
+      background: background
+    }]
+  }), jsx("div", {
+    className: "back",
+    css: [backStyle, {
       background: background
     }]
   }));
@@ -608,6 +608,6 @@ function Progress(_ref) {
 
 var areaStyle$1 = css(_templateObject$8());
 var backStyle = css(_templateObject2$5());
-var defaultStyle$7 = css(_templateObject3$4());
+var fillStyle = css(_templateObject3$4());
 
 export { Button, Card, ContentType, Header, Icon, IconButton, NavButton, Progress, Sticker, subHeader as SubHeader };
