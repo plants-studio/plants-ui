@@ -8,6 +8,8 @@ export type ProgressProps = {
   width: string | number;
   /** 프로그래스바의 색깔 */
   color?: string;
+  /** 프로그래스바의 두께 */
+  height?: string | number;
 };
 
 /** `Progress` 는 기본적인 프로그래스바 입니다. */
@@ -15,11 +17,15 @@ function Progress({
   percentage = 0,
   width = "100%",
   color = "#f23c4c",
+  height = "0.5rem",
 }: ProgressProps) {
   const background = color;
   return (
-    <div className="area" css={[areaStyle, { width }]}>
-      <div className="back" css={[backStyle, { background }]}></div>
+    <div
+      className="area"
+      css={[areaStyle, { width }, { height }, { background }]}
+    >
+      <div className="back" css={[backStyle]}></div>
       <div
         className="progress"
         css={[defaultStyle, `width: ${percentage}%;`, { background }]}
@@ -29,7 +35,10 @@ function Progress({
 }
 
 const areaStyle = css`
-  height: 0.5rem;
+  display: flex;
+  flex-direction: row-reverse;
+  border-radius: 2px;
+  overflow: hidden;
 `;
 
 const backStyle = css`
@@ -40,8 +49,6 @@ const backStyle = css`
 `;
 
 const defaultStyle = css`
-  position: relative;
-  bottom: 0.5rem;
   height: 100%;
   background-color: #f23c4c;
   opacity: 1;

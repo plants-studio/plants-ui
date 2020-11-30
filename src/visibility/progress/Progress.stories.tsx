@@ -10,7 +10,7 @@ export default {
 };
 
 export const progress = () => {
-  const percentage = number("percentage", 0);
+  const percentage = number("percentage", 20);
   const width = text("width", "");
   const color = text("color", "");
   return (
