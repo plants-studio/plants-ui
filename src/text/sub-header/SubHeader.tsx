@@ -8,11 +8,22 @@ export type SubHeaderProps = {
   width?: string | number;
   /** 서브 헤더의 크기 */
   size: "small";
+  /** 서브 헤더의 padding 값 */
+  padding?: string | number;
 };
 
 /** `SubHeader` 는 보조적인 설명이 있는 헤더입니다 */
-function subHeader({ children, width, size = "small" }: SubHeaderProps) {
-  return <h3 css={[defaultStyle, sizes[size], { width }]}>{children}</h3>;
+function subHeader({
+  children,
+  width,
+  size = "small",
+  padding,
+}: SubHeaderProps) {
+  return (
+    <h3 css={[defaultStyle, sizes[size], { width }, { padding }]}>
+      {children}
+    </h3>
+  );
 }
 
 const defaultStyle = css`

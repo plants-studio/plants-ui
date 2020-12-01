@@ -8,11 +8,17 @@ export type HeaderProps = {
   width?: string | number;
   /** 헤더의 크기 */
   size: "small" | "medium" | "large";
+  /** 헤더의 padding 값 */
+  padding?: string | number;
 };
 
 /** `Header` 는 기본적인 헤더입니다 */
-function Header({ children, width, size = "medium" }: HeaderProps) {
-  return <h1 css={[defaultStyle, sizes[size], { width }]}>{children}</h1>;
+function Header({ children, width, size = "medium", padding }: HeaderProps) {
+  return (
+    <h1 css={[defaultStyle, sizes[size], { width }, { padding }]}>
+      {children}
+    </h1>
+  );
 }
 
 const defaultStyle = css`
