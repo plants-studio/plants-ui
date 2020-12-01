@@ -5,7 +5,7 @@ export type ProgressProps = {
   /** 퍼센트에이지 */
   percentage: number;
   /** 프로그래스바의 너비 */
-  width: string | number;
+  width?: string | number;
   /** 프로그래스바의 색깔 */
   color?: string;
 };
