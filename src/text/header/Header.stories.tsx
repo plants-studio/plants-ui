@@ -35,3 +35,25 @@ export const mediumHeader = () => {
 export const largeHeader = () => {
   return <Header size="large">개리형배 제1회 천하제일 오른대회</Header>;
 };
+
+export const wordkeepMode = () => {
+  return (
+    <div style={{ width: "150px" }}>
+      <Header size="small" isWordKeepMode={true}>
+        제목으로 들어갈 예시 텍스트입니다. 이건 이렇게 칸이 너무 많아지면 잘리게
+        되어있어요
+      </Header>
+    </div>
+  );
+};
+
+export const overflowMode = () => {
+  return (
+    <div style={{ width: "300px" }}>
+      <Header size="small" isOverflowMode={true}>
+        제목으로 들어갈 예시 텍스트입니다. 이건 이렇게 칸이 너무 많아지면 잘리게
+        되어있어요
+      </Header>
+    </div>
+  );
+};

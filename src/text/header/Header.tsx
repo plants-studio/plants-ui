@@ -8,14 +8,30 @@ export type HeaderProps = {
   width?: string | number;
   /** 헤더의 크기 */
   size: "small" | "medium" | "large";
-  /** 헤더의 padding 값 */
-  padding?: string | number;
+  /** 오버플로우 모드 활성화 여부 */
+  isOverflowMode?: boolean;
+  /** Word-Keep 모드 활성화 여부 */
+  isWordKeepMode?: boolean;
 };
 
 /** `Header` 는 기본적인 헤더입니다 */
-function Header({ children, width, size = "medium", padding }: HeaderProps) {
+function Header({
+  children,
+  width,
+  size = "medium",
+  isOverflowMode = false,
+  isWordKeepMode = true,
+}: HeaderProps) {
   return (
-    <h1 css={[defaultStyle, sizes[size], { width }, { padding }]}>
+    <h1
+      css={[
+        defaultStyle,
+        sizes[size],
+        { width },
+        setOverflow(isOverflowMode),
+        setWordKeepMode(isWordKeepMode),
+      ]}
+    >
       {children}
     </h1>
   );
@@ -30,15 +46,39 @@ const defaultStyle = css`
 
 const sizes = {
   small: css`
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-weight: bold;
+    line-height: 1.3;
   `,
   medium: css`
-    font-size: 1.5rem;
+    font-size: 1.125rem;
   `,
   large: css`
-    font-size: 2rem;
+    font-size: 1.5rem;
   `,
+};
+
+const setOverflow = (isOverflowMode: boolean) => {
+  if (isOverflowMode) {
+    return css`
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    `;
+  } else {
+    return css``;
+  }
+};
+
+const setWordKeepMode = (isWordKeepMode: boolean) => {
+  if (isWordKeepMode) {
+    return css`
+      word-break: keep-all;
+    `;
+  } else {
+    return css``;
+  }
 };
 
 export default Header;

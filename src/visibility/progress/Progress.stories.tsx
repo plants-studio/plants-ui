@@ -10,9 +10,9 @@ export default {
 };
 
 export const progress = () => {
-  const percentage = number("percentage", 0);
+  const percentage = number("percentage", 20);
   const width = text("width", "");
-  const color = text("color", "");
+  const color = text("color", "green");
   return (
     <Progress percentage={percentage} width={width} color={color}></Progress>
   );
