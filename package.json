@@ -1,6 +1,6 @@
 {
   "name": "plants-ui",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "module": "dist/index.js",
   "license": "MIT",
   "types": "dist/types/index.d.ts",
