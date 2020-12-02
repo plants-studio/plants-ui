@@ -6,7 +6,11 @@ export declare type HeaderProps = {
     width?: string | number;
     /** 헤더의 크기 */
     size: "small" | "medium" | "large";
+    /** 오버플로우 모드 활성화 여부 */
+    isOverflowMode?: boolean;
+    /** Word-Keep 모드 활성화 여부 */
+    isWordKeepMode?: boolean;
 };
 /** `Header` 는 기본적인 헤더입니다 */
-declare function Header({ children, width, size }: HeaderProps): JSX.Element;
+declare function Header({ children, width, size, isOverflowMode, isWordKeepMode, }: HeaderProps): JSX.Element;
 export default Header;

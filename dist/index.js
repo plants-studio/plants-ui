@@ -259,6 +259,78 @@ function SvgDiscordSolid(props) {
   }, props), _ref$5);
 }
 
+function _extends$6() { _extends$6 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$6.apply(this, arguments); }
+
+var _ref$6 = /*#__PURE__*/createElement("path", {
+  fill: "currentColor",
+  d: "M400 54.1c63 45 104 118.6 104 201.9 0 136.8-110.8 247.7-247.5 248C120 504.3 8.2 393 8 256.4 7.9 173.1 48.9 99.3 111.8 54.2c11.7-8.3 28-4.8 35 7.7L162.6 90c5.9 10.5 3.1 23.8-6.6 31-41.5 30.8-68 79.6-68 134.9-.1 92.3 74.5 168.1 168 168.1 91.6 0 168.6-74.2 168-169.1-.3-51.8-24.7-101.8-68.1-134-9.7-7.2-12.4-20.5-6.5-30.9l15.8-28.1c7-12.4 23.2-16.1 34.8-7.8zM296 264V24c0-13.3-10.7-24-24-24h-32c-13.3 0-24 10.7-24 24v240c0 13.3 10.7 24 24 24h32c13.3 0 24-10.7 24-24z"
+});
+
+function SvgPowerOffSolid(props) {
+  return /*#__PURE__*/createElement("svg", _extends$6({
+    "aria-hidden": "true",
+    "data-prefix": "fas",
+    "data-icon": "power-off",
+    className: "powerOffSolid_svg__svg-inline--fa powerOffSolid_svg__fa-power-off powerOffSolid_svg__fa-w-16",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 512 512"
+  }, props), _ref$6);
+}
+
+function _extends$7() { _extends$7 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$7.apply(this, arguments); }
+
+var _ref$7 = /*#__PURE__*/createElement("path", {
+  fill: "currentColor",
+  d: "M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
+});
+
+function SvgCogSolid(props) {
+  return /*#__PURE__*/createElement("svg", _extends$7({
+    "aria-hidden": "true",
+    "data-prefix": "fas",
+    "data-icon": "cog",
+    className: "cogSolid_svg__svg-inline--fa cogSolid_svg__fa-cog cogSolid_svg__fa-w-16",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 512 512"
+  }, props), _ref$7);
+}
+
+function _extends$8() { _extends$8 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$8.apply(this, arguments); }
+
+var _ref$8 = /*#__PURE__*/createElement("path", {
+  fill: "currentColor",
+  d: "M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"
+});
+
+function SvgBellSolid(props) {
+  return /*#__PURE__*/createElement("svg", _extends$8({
+    "aria-hidden": "true",
+    "data-prefix": "fas",
+    "data-icon": "bell",
+    className: "bellSolid_svg__svg-inline--fa bellSolid_svg__fa-bell bellSolid_svg__fa-w-14",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 448 512"
+  }, props), _ref$8);
+}
+
+function _extends$9() { _extends$9 = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$9.apply(this, arguments); }
+
+var _ref$9 = /*#__PURE__*/createElement("path", {
+  fill: "currentColor",
+  d: "M439.39 362.29c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71zM67.53 368c21.22-27.97 44.42-74.33 44.53-159.42 0-.2-.06-.38-.06-.58 0-61.86 50.14-112 112-112s112 50.14 112 112c0 .2-.06.38-.06.58.11 85.1 23.31 131.46 44.53 159.42H67.53zM224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64z"
+});
+
+function SvgBellRegular(props) {
+  return /*#__PURE__*/createElement("svg", _extends$9({
+    "aria-hidden": "true",
+    "data-prefix": "far",
+    "data-icon": "bell",
+    className: "bellRegular_svg__svg-inline--fa bellRegular_svg__fa-bell bellRegular_svg__fa-w-14",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 448 512"
+  }, props), _ref$9);
+}
+
 var icons = /*#__PURE__*/Object.freeze({
   __proto__: null,
   community: SvgCommunity,
@@ -266,7 +338,11 @@ var icons = /*#__PURE__*/Object.freeze({
   gameController: SvgGameController,
   vialSolid: SvgVialSolid,
   Home: SvgHome,
-  DiscordSolid: SvgDiscordSolid
+  DiscordSolid: SvgDiscordSolid,
+  powerOffSolid: SvgPowerOffSolid,
+  cogSolid: SvgCogSolid,
+  bellSolid: SvgBellSolid,
+  bellRegular: SvgBellRegular
 });
 
 /** @jsx jsx */
@@ -345,7 +421,7 @@ function _templateObject3$2() {
 }
 
 function _templateObject2$2() {
-  var data = _taggedTemplateLiteral(["\n  display: block;\n  padding-bottom: 1rem;\n  font-size: 1rem;\n  font-weight: normal;\n  color: #858997;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: block;\n  padding-bottom: 1rem;\n  font-size: 0.875rem;\n  font-weight: normal;\n  color: #858997;\n"]);
 
   _templateObject2$2 = function _templateObject2() {
     return data;
@@ -390,7 +466,7 @@ var paddingSelector = function paddingSelector(props) {
 };
 
 function _templateObject$4() {
-  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  padding: 0.25rem 0.5rem;\n  width: max-content;\n  word-break: keep-all;\n  border-radius: 4px;\n  font-size: 1rem;\n  font-weight: bold;\n  color: white;\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  padding: 0.25rem 0.5rem;\n  width: max-content;\n  word-break: keep-all;\n  border-radius: 4px;\n  font-size: 1rem;\n  font-weight: bold;\n  color: white;\n  z-index: 99;\n"]);
 
   _templateObject$4 = function _templateObject() {
     return data;
@@ -447,8 +523,48 @@ function ContentType(_ref) {
 
 var defaultStyle$4 = css(_templateObject$5());
 
+function _templateObject8() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject8 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7() {
+  var data = _taggedTemplateLiteral(["\n      word-break: keep-all;\n    "]);
+
+  _templateObject7 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject6 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5() {
+  var data = _taggedTemplateLiteral(["\n      display: block;\n      overflow: hidden;\n      white-space: nowrap;\n      text-overflow: ellipsis;\n    "]);
+
+  _templateObject5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject4$3() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 2rem;\n  "]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 1.5rem;\n  "]);
 
   _templateObject4$3 = function _templateObject4() {
     return data;
@@ -458,7 +574,7 @@ function _templateObject4$3() {
 }
 
 function _templateObject3$3() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 1.5rem;\n  "]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 1.125rem;\n  "]);
 
   _templateObject3$3 = function _templateObject3() {
     return data;
@@ -468,7 +584,7 @@ function _templateObject3$3() {
 }
 
 function _templateObject2$3() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 1.125rem;\n    font-weight: bold;\n  "]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 1rem;\n    font-weight: bold;\n    line-height: 1.3;\n  "]);
 
   _templateObject2$3 = function _templateObject2() {
     return data;
@@ -492,11 +608,15 @@ function Header(_ref) {
   var children = _ref.children,
       width = _ref.width,
       _ref$size = _ref.size,
-      size = _ref$size === void 0 ? "medium" : _ref$size;
+      size = _ref$size === void 0 ? "medium" : _ref$size,
+      _ref$isOverflowMode = _ref.isOverflowMode,
+      isOverflowMode = _ref$isOverflowMode === void 0 ? false : _ref$isOverflowMode,
+      _ref$isWordKeepMode = _ref.isWordKeepMode,
+      isWordKeepMode = _ref$isWordKeepMode === void 0 ? true : _ref$isWordKeepMode;
   return jsx("h1", {
     css: [defaultStyle$5, sizes[size], {
       width: width
-    }]
+    }, setOverflow(isOverflowMode), setWordKeepMode(isWordKeepMode)]
   }, children);
 }
 
@@ -507,8 +627,64 @@ var sizes = {
   large: css(_templateObject4$3())
 };
 
+var setOverflow = function setOverflow(isOverflowMode) {
+  if (isOverflowMode) {
+    return css(_templateObject5());
+  } else {
+    return css(_templateObject6());
+  }
+};
+
+var setWordKeepMode = function setWordKeepMode(isWordKeepMode) {
+  if (isWordKeepMode) {
+    return css(_templateObject7());
+  } else {
+    return css(_templateObject8());
+  }
+};
+
+function _templateObject6$1() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject6$1 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5$1() {
+  var data = _taggedTemplateLiteral(["\n      word-break: keep-all;\n    "]);
+
+  _templateObject5$1 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4$4() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject4$4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3$4() {
+  var data = _taggedTemplateLiteral(["\n      display: block;\n      overflow: hidden;\n      white-space: nowrap;\n      text-overflow: ellipsis;\n    "]);
+
+  _templateObject3$4 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject2$4() {
-  var data = _taggedTemplateLiteral(["\n    font-size: 1rem;\n  "]);
+  var data = _taggedTemplateLiteral(["\n    font-size: 0.875rem;\n  "]);
 
   _templateObject2$4 = function _templateObject2() {
     return data;
@@ -532,11 +708,15 @@ function subHeader(_ref) {
   var children = _ref.children,
       width = _ref.width,
       _ref$size = _ref.size,
-      size = _ref$size === void 0 ? "small" : _ref$size;
+      size = _ref$size === void 0 ? "small" : _ref$size,
+      _ref$isOverflowMode = _ref.isOverflowMode,
+      isOverflowMode = _ref$isOverflowMode === void 0 ? false : _ref$isOverflowMode,
+      _ref$isWordKeepMode = _ref.isWordKeepMode,
+      isWordKeepMode = _ref$isWordKeepMode === void 0 ? true : _ref$isWordKeepMode;
   return jsx("h3", {
     css: [defaultStyle$6, sizes$1[size], {
       width: width
-    }]
+    }, setOverflow$1(isOverflowMode), setWordKeepMode$1(isWordKeepMode)]
   }, children);
 }
 
@@ -545,10 +725,26 @@ var sizes$1 = {
   small: css(_templateObject2$4())
 };
 
-function _templateObject3$4() {
+var setOverflow$1 = function setOverflow(isOverflowMode) {
+  if (isOverflowMode) {
+    return css(_templateObject3$4());
+  } else {
+    return css(_templateObject4$4());
+  }
+};
+
+var setWordKeepMode$1 = function setWordKeepMode(isWordKeepMode) {
+  if (isWordKeepMode) {
+    return css(_templateObject5$1());
+  } else {
+    return css(_templateObject6$1());
+  }
+};
+
+function _templateObject3$5() {
   var data = _taggedTemplateLiteral(["\n  height: 100%;\n  background: red;\n  opacity: 1;\n"]);
 
-  _templateObject3$4 = function _templateObject3() {
+  _templateObject3$5 = function _templateObject3() {
     return data;
   };
 
@@ -608,6 +804,6 @@ function Progress(_ref) {
 
 var areaStyle$1 = css(_templateObject$8());
 var backStyle = css(_templateObject2$5());
-var fillStyle = css(_templateObject3$4());
+var fillStyle = css(_templateObject3$5());
 
 export { Button, Card, ContentType, Header, Icon, IconButton, NavButton, Progress, Sticker, subHeader as SubHeader };
