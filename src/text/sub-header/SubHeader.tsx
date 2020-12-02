@@ -8,8 +8,10 @@ export type SubHeaderProps = {
   width?: string | number;
   /** 서브 헤더의 크기 */
   size: "small";
-  /** 서브 헤더의 padding 값 */
-  padding?: string | number;
+  /** 오버플로우 모드 활성화 여부 */
+  isOverflowMode?: boolean;
+  /** Word-Keep 모드 활성화 여부 */
+  isWordKeepMode?: boolean;
 };
 
 /** `SubHeader` 는 보조적인 설명이 있는 헤더입니다 */
@@ -17,10 +19,19 @@ function subHeader({
   children,
   width,
   size = "small",
-  padding,
+  isOverflowMode = false,
+  isWordKeepMode = true,
 }: SubHeaderProps) {
   return (
-    <h3 css={[defaultStyle, sizes[size], { width }, { padding }]}>
+    <h3
+      css={[
+        defaultStyle,
+        sizes[size],
+        { width },
+        setOverflow(isOverflowMode),
+        setWordKeepMode(isWordKeepMode),
+      ]}
+    >
       {children}
     </h3>
   );
@@ -36,8 +47,31 @@ const defaultStyle = css`
 
 const sizes = {
   small: css`
-    font-size: 1rem;
+    font-size: 0.875rem;
   `,
+};
+
+const setOverflow = (isOverflowMode: boolean) => {
+  if (isOverflowMode) {
+    return css`
+      display: block;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    `;
+  } else {
+    return css``;
+  }
+};
+
+const setWordKeepMode = (isWordKeepMode: boolean) => {
+  if (isWordKeepMode) {
+    return css`
+      word-break: keep-all;
+    `;
+  } else {
+    return css``;
+  }
 };
 
 export default subHeader;

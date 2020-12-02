@@ -6,18 +6,43 @@ export type StickerProps = {
   children: React.ReactNode;
   /** 스티커의 색상 */
   backgroundColor?: string;
+  top?: string;
+  left?: string;
+  right?: string;
+  bottom?: string;
 };
 
-function Sticker({ children, backgroundColor = "gray" }: StickerProps) {
-  return <div css={[defaultStyle, { backgroundColor }]}>{children}</div>;
+function Sticker({
+  children,
+  backgroundColor = "gray",
+  top,
+  left,
+  right,
+  bottom,
+}: StickerProps) {
+  return (
+    <div
+      css={[
+        defaultStyle,
+        { backgroundColor },
+        { top },
+        { left },
+        { right },
+        { bottom },
+      ]}
+    >
+      {children}
+    </div>
+  );
 }
 
 const defaultStyle = css`
+  position: absolute;
   padding: 0.25rem 0.5rem;
   width: max-content;
   word-break: keep-all;
   border-radius: 4px;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: bold;
   color: white;
   z-index: 99;
