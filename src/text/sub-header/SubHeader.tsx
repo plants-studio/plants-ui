@@ -8,6 +8,8 @@ export type SubHeaderProps = {
   width?: string | number;
   /** 서브 헤더의 크기 */
   size: "small";
+  /** 서브 헤더의 패딩 */
+  padding: string | number;
   /** 오버플로우 모드 활성화 여부 */
   isOverflowMode?: boolean;
   /** Word-Keep 모드 활성화 여부 */
@@ -19,6 +21,7 @@ function subHeader({
   children,
   width,
   size = "small",
+  padding,
   isOverflowMode = false,
   isWordKeepMode = true,
 }: SubHeaderProps) {
@@ -28,6 +31,7 @@ function subHeader({
         defaultStyle,
         sizes[size],
         { width },
+        { padding },
         setOverflow(isOverflowMode),
         setWordKeepMode(isWordKeepMode),
       ]}
