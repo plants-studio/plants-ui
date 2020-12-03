@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
+import React from "react";
 
 export type CardProps = {
   /** 카드 안에 들어갈 내용. div로 감싸져 있어야 함 */
@@ -12,6 +13,8 @@ export type CardProps = {
   cardTitle?: string;
   /** 카드의 padding 여부 */
   isPadding?: boolean;
+  /** 클릭시 실행할 함수 */
+  onClick?: (e?: React.MouseEvent<HTMLDivElement>) => void;
 };
 
 function Card({
@@ -20,10 +23,12 @@ function Card({
   height,
   cardTitle,
   isPadding = true,
+  onClick,
 }: CardProps) {
   return (
     <div
       css={[defaultStyle, { width }, { height }, paddingSelector(isPadding)]}
+      onClick={onClick}
     >
       {cardTitle != null && <span css={cardTitleStyle}>{cardTitle}</span>}
       {children}
