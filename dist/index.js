@@ -1,5 +1,5 @@
 import { jsx, css } from '@emotion/core';
-import { createElement } from 'react';
+import { createElement, useState, useRef, useEffect } from 'react';
 
 function _taggedTemplateLiteral(strings, raw) {
   if (!raw) {
@@ -331,6 +331,42 @@ function SvgBellRegular(props) {
   }, props), _ref$9);
 }
 
+function _extends$a() { _extends$a = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$a.apply(this, arguments); }
+
+var _ref$a = /*#__PURE__*/createElement("path", {
+  fill: "currentColor",
+  d: "M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"
+});
+
+function SvgChevronLeft(props) {
+  return /*#__PURE__*/createElement("svg", _extends$a({
+    "aria-hidden": "true",
+    "data-prefix": "fas",
+    "data-icon": "chevron-left",
+    className: "chevronLeft_svg__svg-inline--fa chevronLeft_svg__fa-chevron-left chevronLeft_svg__fa-w-10",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 320 512"
+  }, props), _ref$a);
+}
+
+function _extends$b() { _extends$b = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends$b.apply(this, arguments); }
+
+var _ref$b = /*#__PURE__*/createElement("path", {
+  fill: "currentColor",
+  d: "M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"
+});
+
+function SvgChevronRight(props) {
+  return /*#__PURE__*/createElement("svg", _extends$b({
+    "aria-hidden": "true",
+    "data-prefix": "fas",
+    "data-icon": "chevron-right",
+    className: "chevronRight_svg__svg-inline--fa chevronRight_svg__fa-chevron-right chevronRight_svg__fa-w-10",
+    xmlns: "http://www.w3.org/2000/svg",
+    viewBox: "0 0 320 512"
+  }, props), _ref$b);
+}
+
 var icons = /*#__PURE__*/Object.freeze({
   __proto__: null,
   community: SvgCommunity,
@@ -342,7 +378,9 @@ var icons = /*#__PURE__*/Object.freeze({
   powerOffSolid: SvgPowerOffSolid,
   cogSolid: SvgCogSolid,
   bellSolid: SvgBellSolid,
-  bellRegular: SvgBellRegular
+  bellRegular: SvgBellRegular,
+  chevronLeft: SvgChevronLeft,
+  chevronRight: SvgChevronRight
 });
 
 /** @jsx jsx */
@@ -370,7 +408,7 @@ var Icon = function Icon(_ref) {
 };
 
 function _templateObject$2() {
-  var data = _taggedTemplateLiteral(["\n  outline: none;\n  border: none;\n  box-sizing: border-box;\n  width: 4.5rem;\n  height: 4.5rem;\n  padding: 0;\n  border-radius: 35%;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  background-color: rgba(237, 240, 247, 0.4);\n\n  &:hover {\n    background-color: rgba(237, 240, 247, 1);\n    svg {\n      color: #bdc6d8;\n    }\n  }\n\n  svg {\n    width: 40%;\n    color: #dde3ef;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  outline: none;\n  border: none;\n  box-sizing: border-box;\n  width: 4.5rem;\n  height: 4.5rem;\n  padding: 0;\n  border-radius: 35%;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  background-color: rgba(237, 240, 247, 0.4);\n\n  &:hover {\n    cursor: pointer;\n    background-color: rgba(237, 240, 247, 1);\n    svg {\n      color: #bdc6d8;\n    }\n  }\n\n  svg {\n    width: 40%;\n    color: #dde3ef;\n  }\n"]);
 
   _templateObject$2 = function _templateObject() {
     return data;
@@ -400,18 +438,95 @@ function IconButton(_ref) {
 
 var defaultStyle$1 = css(_templateObject$2());
 
-function _templateObject4$2() {
-  var data = _taggedTemplateLiteral(["\n        padding: 0;\n      "]);
+function _templateObject$3() {
+  var data = _taggedTemplateLiteral(["\n  position: relative;\n  outline: none;\n  border: none;\n  box-sizing: border-box;\n  background-color: #ffffff;\n  color: #f23c4c;\n  border-radius: 20%;\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n\n  &:hover {\n    cursor: pointer;\n    background: rgba(242, 60, 76, 0.1);\n  }\n\n  svg {\n    width: 50%;\n  }\n"]);
 
-  _templateObject4$2 = function _templateObject4() {
+  _templateObject$3 = function _templateObject() {
     return data;
   };
 
   return data;
 }
 
+/** `ChevronButton` 은 화살표 버튼입니다. */
+function ChevronButton(_ref) {
+  var themeType = _ref.themeType,
+      _ref$size = _ref.size,
+      size = _ref$size === void 0 ? "2rem" : _ref$size,
+      onClick = _ref.onClick;
+  return jsx("button", {
+    css: [defaultStyle$2, {
+      width: size,
+      height: size
+    }],
+    onClick: onClick
+  }, jsx(Icon, {
+    icon: themeType
+  }));
+}
+
+var defaultStyle$2 = css(_templateObject$3());
+
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
+function _iterableToArrayLimit(arr, i) {
+  if (typeof Symbol === "undefined" || !(Symbol.iterator in Object(arr))) return;
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
+function _arrayLikeToArray(arr, len) {
+  if (len == null || len > arr.length) len = arr.length;
+
+  for (var i = 0, arr2 = new Array(len); i < len; i++) {
+    arr2[i] = arr[i];
+  }
+
+  return arr2;
+}
+
+function _unsupportedIterableToArray(o, minLen) {
+  if (!o) return;
+  if (typeof o === "string") return _arrayLikeToArray(o, minLen);
+  var n = Object.prototype.toString.call(o).slice(8, -1);
+  if (n === "Object" && o.constructor) n = o.constructor.name;
+  if (n === "Map" || n === "Set") return Array.from(o);
+  if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen);
+}
+
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
+}
+
+function _slicedToArray(arr, i) {
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
+}
+
 function _templateObject3$2() {
-  var data = _taggedTemplateLiteral(["\n        padding: 1rem 1rem;\n      "]);
+  var data = _taggedTemplateLiteral(["\n  position: relative;\n  height: 100%;\n  background: red;\n  opacity: 1;\n"]);
 
   _templateObject3$2 = function _templateObject3() {
     return data;
@@ -421,7 +536,7 @@ function _templateObject3$2() {
 }
 
 function _templateObject2$2() {
-  var data = _taggedTemplateLiteral(["\n  display: block;\n  padding-bottom: 1rem;\n  font-size: 0.875rem;\n  font-weight: normal;\n  color: #858997;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 100%;\n  background: red;\n  opacity: 0.3;\n"]);
 
   _templateObject2$2 = function _templateObject2() {
     return data;
@@ -430,43 +545,8 @@ function _templateObject2$2() {
   return data;
 }
 
-function _templateObject$3() {
-  var data = _taggedTemplateLiteral(["\n  background-color: white;\n  border-radius: 8px;\n  box-shadow: 0px 6px 25px #d1d5df;\n  overflow: hidden;\n"]);
-
-  _templateObject$3 = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-function Card(_ref) {
-  var children = _ref.children,
-      width = _ref.width,
-      height = _ref.height,
-      cardTitle = _ref.cardTitle,
-      _ref$isPadding = _ref.isPadding,
-      isPadding = _ref$isPadding === void 0 ? true : _ref$isPadding;
-  return jsx("div", {
-    css: [defaultStyle$2, {
-      width: width
-    }, {
-      height: height
-    }, paddingSelector(isPadding)]
-  }, cardTitle != null && jsx("span", {
-    css: cardTitleStyle
-  }, cardTitle), children);
-}
-
-var defaultStyle$2 = css(_templateObject$3());
-var cardTitleStyle = css(_templateObject2$2());
-
-var paddingSelector = function paddingSelector(props) {
-  return props ? css(_templateObject3$2()) : css(_templateObject4$2());
-};
-
 function _templateObject$4() {
-  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  padding: 0.25rem 0.5rem;\n  width: max-content;\n  word-break: keep-all;\n  border-radius: 4px;\n  font-size: 1rem;\n  font-weight: bold;\n  color: white;\n  z-index: 99;\n"]);
+  var data = _taggedTemplateLiteral(["\n  border-radius: 2px;\n  overflow: hidden;\n"]);
 
   _templateObject$4 = function _templateObject() {
     return data;
@@ -475,53 +555,41 @@ function _templateObject$4() {
   return data;
 }
 
-function Sticker(_ref) {
-  var children = _ref.children,
-      _ref$backgroundColor = _ref.backgroundColor,
-      backgroundColor = _ref$backgroundColor === void 0 ? "gray" : _ref$backgroundColor,
-      top = _ref.top,
-      left = _ref.left,
-      right = _ref.right,
-      bottom = _ref.bottom;
+/** `Progress` 는 기본적인 프로그래스바 입니다. */
+function Progress(_ref) {
+  var _ref$percentage = _ref.percentage,
+      percentage = _ref$percentage === void 0 ? 0 : _ref$percentage,
+      _ref$width = _ref.width,
+      width = _ref$width === void 0 ? "100%" : _ref$width,
+      _ref$color = _ref.color,
+      color = _ref$color === void 0 ? "#f23c4c" : _ref$color,
+      _ref$height = _ref.height,
+      height = _ref$height === void 0 ? "0.5rem" : _ref$height;
   return jsx("div", {
-    css: [defaultStyle$3, {
-      backgroundColor: backgroundColor
-    }, {
-      top: top
-    }, {
-      left: left
-    }, {
-      right: right
-    }, {
-      bottom: bottom
+    className: "area",
+    css: [areaStyle$1, {
+      width: width,
+      height: height
     }]
-  }, children);
-}
-
-var defaultStyle$3 = css(_templateObject$4());
-
-function _templateObject$5() {
-  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-size: 0.875rem;\n  font-weight: bold;\n  color: #f23c4c;\n"]);
-
-  _templateObject$5 = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-/** `ContentType` 는 콘텐츠의 타입을 알려주는 텍스트입니다 */
-function ContentType(_ref) {
-  var children = _ref.children,
-      width = _ref.width;
-  return jsx("p", {
-    css: [defaultStyle$4, {
-      width: width
+  }, jsx("div", {
+    className: "back",
+    css: [backStyle, {
+      background: color
     }]
-  }, children);
+  }), jsx("div", {
+    className: "progress",
+    css: [fillStyle, {
+      width: "".concat(percentage, "%"),
+      height: height,
+      background: color,
+      bottom: height
+    }]
+  }));
 }
 
-var defaultStyle$4 = css(_templateObject$5());
+var areaStyle$1 = css(_templateObject$4());
+var backStyle = css(_templateObject2$2());
+var fillStyle = css(_templateObject3$2());
 
 function _templateObject8() {
   var data = _taggedTemplateLiteral([""]);
@@ -563,10 +631,10 @@ function _templateObject5() {
   return data;
 }
 
-function _templateObject4$3() {
+function _templateObject4$2() {
   var data = _taggedTemplateLiteral(["\n    font-size: 1.5rem;\n  "]);
 
-  _templateObject4$3 = function _templateObject4() {
+  _templateObject4$2 = function _templateObject4() {
     return data;
   };
 
@@ -593,10 +661,10 @@ function _templateObject2$3() {
   return data;
 }
 
-function _templateObject$6() {
+function _templateObject$5() {
   var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-weight: normal;\n"]);
 
-  _templateObject$6 = function _templateObject() {
+  _templateObject$5 = function _templateObject() {
     return data;
   };
 
@@ -614,17 +682,17 @@ function Header(_ref) {
       _ref$isWordKeepMode = _ref.isWordKeepMode,
       isWordKeepMode = _ref$isWordKeepMode === void 0 ? true : _ref$isWordKeepMode;
   return jsx("h1", {
-    css: [defaultStyle$5, sizes[size], {
+    css: [defaultStyle$3, sizes[size], {
       width: width
     }, setOverflow(isOverflowMode), setWordKeepMode(isWordKeepMode)]
   }, children);
 }
 
-var defaultStyle$5 = css(_templateObject$6());
+var defaultStyle$3 = css(_templateObject$5());
 var sizes = {
   small: css(_templateObject2$3()),
   medium: css(_templateObject3$3()),
-  large: css(_templateObject4$3())
+  large: css(_templateObject4$2())
 };
 
 var setOverflow = function setOverflow(isOverflowMode) {
@@ -663,10 +731,10 @@ function _templateObject5$1() {
   return data;
 }
 
-function _templateObject4$4() {
+function _templateObject4$3() {
   var data = _taggedTemplateLiteral([""]);
 
-  _templateObject4$4 = function _templateObject4() {
+  _templateObject4$3 = function _templateObject4() {
     return data;
   };
 
@@ -693,10 +761,10 @@ function _templateObject2$4() {
   return data;
 }
 
-function _templateObject$7() {
+function _templateObject$6() {
   var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  color: #5d5d5d;\n  font-weight: normal;\n"]);
 
-  _templateObject$7 = function _templateObject() {
+  _templateObject$6 = function _templateObject() {
     return data;
   };
 
@@ -709,18 +777,21 @@ function subHeader(_ref) {
       width = _ref.width,
       _ref$size = _ref.size,
       size = _ref$size === void 0 ? "small" : _ref$size,
+      padding = _ref.padding,
       _ref$isOverflowMode = _ref.isOverflowMode,
       isOverflowMode = _ref$isOverflowMode === void 0 ? false : _ref$isOverflowMode,
       _ref$isWordKeepMode = _ref.isWordKeepMode,
       isWordKeepMode = _ref$isWordKeepMode === void 0 ? true : _ref$isWordKeepMode;
   return jsx("h3", {
-    css: [defaultStyle$6, sizes$1[size], {
+    css: [defaultStyle$4, sizes$1[size], {
       width: width
+    }, {
+      padding: padding
     }, setOverflow$1(isOverflowMode), setWordKeepMode$1(isWordKeepMode)]
   }, children);
 }
 
-var defaultStyle$6 = css(_templateObject$7());
+var defaultStyle$4 = css(_templateObject$6());
 var sizes$1 = {
   small: css(_templateObject2$4())
 };
@@ -729,7 +800,7 @@ var setOverflow$1 = function setOverflow(isOverflowMode) {
   if (isOverflowMode) {
     return css(_templateObject3$4());
   } else {
-    return css(_templateObject4$4());
+    return css(_templateObject4$3());
   }
 };
 
@@ -741,8 +812,71 @@ var setWordKeepMode$1 = function setWordKeepMode(isWordKeepMode) {
   }
 };
 
+function _templateObject$7() {
+  var data = _taggedTemplateLiteral(["\n  box-sizing: border-box;\n  margin: 0;\n  padding: 0;\n  font-size: 0.875rem;\n  font-weight: bold;\n  color: #f23c4c;\n"]);
+
+  _templateObject$7 = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+/** `ContentType` 는 콘텐츠의 타입을 알려주는 텍스트입니다 */
+function ContentType(_ref) {
+  var children = _ref.children,
+      width = _ref.width;
+  return jsx("p", {
+    css: [defaultStyle$5, {
+      width: width
+    }]
+  }, children);
+}
+
+var defaultStyle$5 = css(_templateObject$7());
+
+function _templateObject7$1() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"]);
+
+  _templateObject7$1 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6$2() {
+  var data = _taggedTemplateLiteral(["\n  height: 90%;\n  display: flex;\n  overflow: hidden;\n  transition: all 600ms ease-in-out;\n"]);
+
+  _templateObject6$2 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5$2() {
+  var data = _taggedTemplateLiteral(["\n  width: 40%;\n  height: 87.5%;\n  display: flex;\n  flex-direction: column;\n  overflow: hidden;\n"]);
+
+  _templateObject5$2 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4$4() {
+  var data = _taggedTemplateLiteral(["\n  img {\n    width: 100%;\n    height: 100%;\n  }\n"]);
+
+  _templateObject4$4 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject3$5() {
-  var data = _taggedTemplateLiteral(["\n  height: 100%;\n  background: red;\n  opacity: 1;\n"]);
+  var data = _taggedTemplateLiteral(["\n  height: 100%;\n  display: flex;\n  transition: all 600ms ease-in-out;\n"]);
 
   _templateObject3$5 = function _templateObject3() {
     return data;
@@ -752,7 +886,7 @@ function _templateObject3$5() {
 }
 
 function _templateObject2$5() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  height: 100%;\n  background: red;\n  opacity: 0.3;\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 55%;\n  height: 90%;\n  border-radius: 10px;\n  overflow: hidden;\n"]);
 
   _templateObject2$5 = function _templateObject2() {
     return data;
@@ -762,7 +896,7 @@ function _templateObject2$5() {
 }
 
 function _templateObject$8() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  border-radius: 2px;\n  overflow: hidden;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background: #f8faff;\n  display: flex;\n  justify-content: space-around;\n  align-items: center;\n"]);
 
   _templateObject$8 = function _templateObject() {
     return data;
@@ -771,39 +905,195 @@ function _templateObject$8() {
   return data;
 }
 
-/** `Progress` 는 기본적인 프로그래스바 입니다. */
-function Progress(_ref) {
-  var _ref$percentage = _ref.percentage,
-      percentage = _ref$percentage === void 0 ? 0 : _ref$percentage,
-      _ref$width = _ref.width,
-      width = _ref$width === void 0 ? "100%" : _ref$width,
-      _ref$color = _ref.color,
-      color = _ref$color === void 0 ? "#f23c4c" : _ref$color,
+/** `MultiHeroBanner` 는 웹페이지 상단의 큰 배너입니다. */
+function MultiHeroBanner(_ref) {
+  var _ref$width = _ref.width,
+      width = _ref$width === void 0 ? "62.5rem" : _ref$width,
       _ref$height = _ref.height,
-      height = _ref$height === void 0 ? "0.5rem" : _ref$height;
-  var background = color;
+      height = _ref$height === void 0 ? "25rem" : _ref$height,
+      bannerData = _ref.bannerData;
+
+  var _useState = useState("0"),
+      _useState2 = _slicedToArray(_useState, 2),
+      margin = _useState2[0],
+      setMargin = _useState2[1];
+
+  var index = useRef(1);
+
+  var _useState3 = useState(""),
+      _useState4 = _slicedToArray(_useState3, 2),
+      sliderWidth = _useState4[0],
+      setSliderWidth = _useState4[1];
+
+  var _useState5 = useState(""),
+      _useState6 = _slicedToArray(_useState5, 2),
+      slideWidth = _useState6[0],
+      setSlideWidth = _useState6[1];
+
+  var slides = document.getElementsByClassName("slide");
+
+  var imageSwipe = function imageSwipe() {
+    setMargin("0 0 0 -".concat(index.current % slides.length * 100, "%"));
+    index.current++;
+  };
+
+  useEffect(function () {
+    setSliderWidth("".concat((slides.length + 1) * 100, "%"));
+    setSlideWidth("".concat(100 / (slides.length + 1), "%"));
+    setInterval(imageSwipe, 5000);
+  }, []);
   return jsx("div", {
-    className: "area",
-    css: [areaStyle$1, {
+    css: [bannerStyle, {
       width: width
     }, {
       height: height
     }]
   }, jsx("div", {
-    className: "progress",
-    css: [fillStyle, "width: ".concat(percentage, "%;"), {
-      background: background
+    css: imageSliderStyle
+  }, jsx("div", {
+    css: [imageSlidesStyle, "width: ".concat(sliderWidth, ";"), {
+      margin: margin
     }]
-  }), jsx("div", {
-    className: "back",
-    css: [backStyle, {
-      background: background
+  }, bannerData.map(function (data, i) {
+    return jsx("div", {
+      css: [imageSlideStyle, "width: ".concat(slideWidth)],
+      className: "slide",
+      key: i
+    }, jsx("img", {
+      src: data.imagePath,
+      alt: ""
+    }));
+  }))), jsx("div", {
+    css: textSliderWrapperStyle
+  }, jsx("div", {
+    css: [textSliderStyle, "width: ".concat(sliderWidth, ";"), {
+      margin: margin
     }]
-  }));
+  }, bannerData.map(function (data, i) {
+    return jsx("div", {
+      css: [textSlideStyle, "width: ".concat(slideWidth)],
+      key: i
+    }, jsx("span", null, jsx(ContentType, null, data.contentType), jsx(Header, {
+      size: "medium"
+    }, data.header)), jsx(subHeader, {
+      size: "small",
+      padding: "2rem 0"
+    }, data.subHeader));
+  })), jsx(Progress, {
+    percentage: 50,
+    color: "#f23c4c",
+    width: "100% "
+  })));
 }
 
-var areaStyle$1 = css(_templateObject$8());
-var backStyle = css(_templateObject2$5());
-var fillStyle = css(_templateObject3$5());
+var bannerStyle = css(_templateObject$8());
+var imageSliderStyle = css(_templateObject2$5());
+var imageSlidesStyle = css(_templateObject3$5());
+var imageSlideStyle = css(_templateObject4$4());
+var textSliderWrapperStyle = css(_templateObject5$2());
+var textSliderStyle = css(_templateObject6$2());
+var textSlideStyle = css(_templateObject7$1());
 
-export { Button, Card, ContentType, Header, Icon, IconButton, NavButton, Progress, Sticker, subHeader as SubHeader };
+function _templateObject4$5() {
+  var data = _taggedTemplateLiteral(["\n        padding: 0;\n      "]);
+
+  _templateObject4$5 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3$6() {
+  var data = _taggedTemplateLiteral(["\n        padding: 1rem 1rem;\n      "]);
+
+  _templateObject3$6 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$6() {
+  var data = _taggedTemplateLiteral(["\n  display: block;\n  padding-bottom: 1rem;\n  font-size: 0.875rem;\n  font-weight: normal;\n  color: #858997;\n"]);
+
+  _templateObject2$6 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$9() {
+  var data = _taggedTemplateLiteral(["\n  background-color: white;\n  border-radius: 8px;\n  box-shadow: 0px 6px 25px #d1d5df;\n  overflow: hidden;\n"]);
+
+  _templateObject$9 = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function Card(_ref) {
+  var children = _ref.children,
+      width = _ref.width,
+      height = _ref.height,
+      cardTitle = _ref.cardTitle,
+      _ref$isPadding = _ref.isPadding,
+      isPadding = _ref$isPadding === void 0 ? true : _ref$isPadding,
+      onClick = _ref.onClick;
+  return jsx("div", {
+    css: [defaultStyle$6, {
+      width: width
+    }, {
+      height: height
+    }, paddingSelector(isPadding)],
+    onClick: onClick
+  }, cardTitle != null && jsx("span", {
+    css: cardTitleStyle
+  }, cardTitle), children);
+}
+
+var defaultStyle$6 = css(_templateObject$9());
+var cardTitleStyle = css(_templateObject2$6());
+
+var paddingSelector = function paddingSelector(props) {
+  return props ? css(_templateObject3$6()) : css(_templateObject4$5());
+};
+
+function _templateObject$a() {
+  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  padding: 0.25rem 0.5rem;\n  width: max-content;\n  word-break: keep-all;\n  border-radius: 4px;\n  font-size: 1rem;\n  font-weight: bold;\n  color: white;\n  z-index: 99;\n"]);
+
+  _templateObject$a = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+function Sticker(_ref) {
+  var children = _ref.children,
+      _ref$backgroundColor = _ref.backgroundColor,
+      backgroundColor = _ref$backgroundColor === void 0 ? "gray" : _ref$backgroundColor,
+      top = _ref.top,
+      left = _ref.left,
+      right = _ref.right,
+      bottom = _ref.bottom;
+  return jsx("div", {
+    css: [defaultStyle$7, {
+      backgroundColor: backgroundColor
+    }, {
+      top: top
+    }, {
+      left: left
+    }, {
+      right: right
+    }, {
+      bottom: bottom
+    }]
+  }, children);
+}
+
+var defaultStyle$7 = css(_templateObject$a());
+
+export { Button, Card, ChevronButton, ContentType, Header, Icon, IconButton, MultiHeroBanner, NavButton, Progress, Sticker, subHeader as SubHeader };
