@@ -12,7 +12,11 @@ export type ChevronButtonProps = {
 };
 
 /** `ChevronButton` 은 화살표 버튼입니다. */
-function Button({ themeType, size = "2rem", onClick }: ChevronButtonProps) {
+function ChevronButton({
+  themeType,
+  size = "2rem",
+  onClick,
+}: ChevronButtonProps) {
   return (
     <button
       css={[defaultStyle, { width: size, height: size }]}
@@ -45,4 +49,4 @@ const defaultStyle = css`
   }
 `;
 
-export default Button;
+export default ChevronButton;

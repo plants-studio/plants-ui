@@ -28,7 +28,7 @@ const bannerData = [
     header: "제1회 배그 미라마 오토바이 레이스",
     subHeader: <>우탕탕탕 배그 레이스 오픈</>,
     imagePath:
-      "https://lh3.googleusercontent.com/proxy/k389em2EiKVB9rFhlpZAnkXZkp2B1Gc7JTtKj5LE_hD9pLAwJIScUy6BUGc3iEYRtk-zLgMxX_8BzJcvwosqQgyLLrlW615CLD1G_RLmYfl6IVgRo89U6_ptTep9A0yAGs-MA6CcDgAYUZZy8RwuOZg6A0_dGkzvhOTLHyJ-nFMFNscTOjaS87mjSVdO_X9jP6rF8wcMh97p1fGC7CB1MdsrtgibGUtBxKv_IhbCHne1zsZVlZraxp55XotL8pr1XS_dRd2O4uE0vMy1kFDzB6SDolP2oKH9HuHmGk0NTw6ermpdWZdO8Q",
+      "https://t1.kakaocdn.net/gamepub/daumgame/common/meta_tag_pubg.png",
     contentType: "대회 / 이벤트",
   },
   {
