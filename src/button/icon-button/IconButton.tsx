@@ -37,6 +37,7 @@ const defaultStyle = css`
   background-color: rgba(237, 240, 247, 0.4);
 
   &:hover {
+    cursor: pointer;
     background-color: rgba(237, 240, 247, 1);
     svg {
       color: #bdc6d8;

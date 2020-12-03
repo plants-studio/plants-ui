@@ -8,3 +8,5 @@ export { ReactComponent as powerOffSolid} from "./powerOffSolid.svg";
 export { ReactComponent as cogSolid} from "./cogSolid.svg";
 export { ReactComponent as bellSolid} from "./bellSolid.svg";
 export { ReactComponent as bellRegular} from "./bellRegular.svg";
+export { ReactComponent as chevronLeft} from "./chevronLeft.svg";
+export { ReactComponent as chevronRight} from "./chevronRight.svg";
