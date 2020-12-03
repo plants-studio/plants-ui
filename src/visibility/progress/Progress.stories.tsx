@@ -13,8 +13,14 @@ export const progress = () => {
   const percentage = number("percentage", 20);
   const width = text("width", "");
   const color = text("color", "green");
+  const height = text("height", "0.5rem");
   return (
-    <Progress percentage={percentage} width={width} color={color}></Progress>
+    <Progress
+      percentage={percentage}
+      width={width}
+      color={color}
+      height={height}
+    ></Progress>
   );
 };
 
