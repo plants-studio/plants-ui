@@ -13,6 +13,8 @@ export type CardProps = {
   cardTitle?: string;
   /** 카드의 padding 여부 */
   isPadding?: boolean;
+  /** 카드의 margin */
+  margin?: string;
   /** 클릭시 실행할 함수 */
   onClick?: (e?: React.MouseEvent<HTMLDivElement>) => void;
 };
@@ -22,12 +24,17 @@ function Card({
   width,
   height,
   cardTitle,
+  margin,
   isPadding = true,
   onClick,
 }: CardProps) {
   return (
     <div
-      css={[defaultStyle, { width }, { height }, paddingSelector(isPadding)]}
+      css={[
+        defaultStyle,
+        { width, height, margin },
+        paddingSelector(isPadding),
+      ]}
       onClick={onClick}
     >
       {cardTitle != null && <span css={cardTitleStyle}>{cardTitle}</span>}
