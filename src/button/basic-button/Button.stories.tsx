@@ -20,11 +20,13 @@ export const button = () => {
   );
   const isDisabled = boolean("disabled", false);
   const width = text("width", "");
+  const margin = text("margin", "");
   return (
     <Button
       themeType={themeType}
       isDisabled={isDisabled}
       width={width}
+      margin={margin}
       onClick={action("onClick")}
     >
       {label}

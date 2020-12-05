@@ -17,10 +17,12 @@ export const chevronButton = () => {
     "chevronLeft"
   );
   const width = text("size", "2rem");
+  const margin = text("margin", "");
   return (
     <ChevronButton
       themeType={themeType}
       size={width}
+      margin={margin}
       onClick={action("onClick")}
     ></ChevronButton>
   );

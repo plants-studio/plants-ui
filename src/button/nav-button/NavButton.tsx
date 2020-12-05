@@ -8,6 +8,8 @@ export type NavButtonProps = {
   onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
   /** 버튼의 너비 */
   width?: string | number;
+  /** 버튼의 margin */
+  margin?: string;
   /** 해당 페이지인지 여부 */
   isSelected?: boolean;
 };
@@ -16,12 +18,13 @@ export type NavButtonProps = {
 function NavButton({
   children,
   width,
+  margin,
   isSelected = false,
   onClick,
 }: NavButtonProps) {
   return (
     <div
-      css={[areaStyle, { width }, focusSelector(isSelected)]}
+      css={[areaStyle, { width, margin }, focusSelector(isSelected)]}
       onClick={onClick}
     >
       <div className="item" css={itemStyle}>

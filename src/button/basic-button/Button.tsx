@@ -8,6 +8,8 @@ export type ButtonProps = {
   onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void;
   /** 버튼의 생김새 타입 */
   themeType: "primary" | "secondary" | "tertiary";
+  /** 버튼의 margin */
+  margin?: string;
   /** 버튼의 비활성화 여부 */
   isDisabled?: boolean;
   /** 버튼의 너비 */
@@ -19,12 +21,13 @@ function Button({
   children,
   themeType = "primary",
   isDisabled,
+  margin,
   width,
   onClick,
 }: ButtonProps) {
   return (
     <button
-      css={[defaultStyle, themeTypeStyle[themeType], { width }]}
+      css={[defaultStyle, themeTypeStyle[themeType], { width, margin }]}
       onClick={onClick}
       disabled={isDisabled}
     >
@@ -102,6 +105,7 @@ const themeTypeStyle = {
   `,
   tertiary: css`
     background: none;
+    transition: background-color 150ms;
     color: #f23c4c;
     svg {
       fill: #f23c4c;

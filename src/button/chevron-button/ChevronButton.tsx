@@ -9,17 +9,20 @@ export type ChevronButtonProps = {
   themeType: "chevronLeft" | "chevronRight";
   /** 화살표 버튼의 사이즈 */
   size?: string | number;
+  /** 화살표 버튼의 margin */
+  margin?: string;
 };
 
 /** `ChevronButton` 은 화살표 버튼입니다. */
 function ChevronButton({
   themeType,
   size = "2rem",
+  margin,
   onClick,
 }: ChevronButtonProps) {
   return (
     <button
-      css={[defaultStyle, { width: size, height: size }]}
+      css={[defaultStyle, { width: size, height: size, margin }]}
       onClick={onClick}
     >
       <Icon icon={themeType}></Icon>
