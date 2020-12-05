@@ -17,10 +17,12 @@ export const iconButton = () => {
     "community"
   );
   const size = text("size", "");
+  const margin = text("margin", "");
   return (
     <IconButton
       icon={iconType}
       size={size}
+      margin={margin}
       onClick={action("onClick")}
     ></IconButton>
   );

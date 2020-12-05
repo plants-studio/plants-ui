@@ -8,16 +8,24 @@ export type IconButtonProps = {
   onClick?: (e?: React.MouseEvent<HTMLButtonElement>) => void;
   /** 아이콘 버튼의 너비와 높이 */
   size?: string;
+  /** 아이콘 버튼의 margin */
+  margin?: string;
   /** 버튼 안에 들어갈 아이콘의 이름 */
   icon: IconType;
 };
 
 /** `IconButton` 은 아이콘이 있는 버튼입니다. */
-function IconButton({ size = "4.5rem", icon, onClick }: IconButtonProps) {
-  const width = size,
-    height = size;
+function IconButton({
+  size = "4.5rem",
+  icon,
+  margin,
+  onClick,
+}: IconButtonProps) {
   return (
-    <button onClick={onClick} css={[defaultStyle, { width, height }]}>
+    <button
+      onClick={onClick}
+      css={[defaultStyle, { width: size, height: size, margin }]}
+    >
       <Icon icon={icon}></Icon>
     </button>
   );

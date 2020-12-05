@@ -5,6 +5,7 @@ import Progress from "../../visibility/progress/Progress";
 import Header from "../../text/header/Header";
 import SubHeader from "../../text/sub-header/SubHeader";
 import ContentType from "../../text/content-type/ContentType";
+import ChevronButton from "../../button/chevron-button/ChevronButton";
 
 export type MultiHeroBannerProps = {
   /** 배너의 너비 */
@@ -43,6 +44,10 @@ function MultiHeroBanner({
     setInterval(imageSwipe, 5000);
   }, []);
 
+  const swipePrevious = () => {};
+
+  const swipeNext = () => {};
+
   return (
     <div css={[bannerStyle, { width }, { height }]}>
       <div css={imageSliderStyle}>
@@ -72,7 +77,11 @@ function MultiHeroBanner({
             </div>
           ))}
         </div>
-        <Progress percentage={50} color="#f23c4c" width="100% "></Progress>
+        <div css={ProgressAreaStyle}>
+          <Progress percentage={50} color="#f23c4c" width="80%" />
+          <ChevronButton themeType="chevronLeft" onClick={swipePrevious} />
+          <ChevronButton themeType="chevronRight" onClick={swipeNext} />
+        </div>
       </div>
     </div>
   );
@@ -99,9 +108,11 @@ const imageSlidesStyle = css`
 `;
 
 const imageSlideStyle = css`
+  overflow: hidden;
   img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 `;
 
@@ -123,6 +134,12 @@ const textSliderStyle = css`
 const textSlideStyle = css`
   display: flex;
   flex-direction: column;
+`;
+
+const ProgressAreaStyle = css`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export default MultiHeroBanner;
