@@ -54,7 +54,7 @@ function MultiHeroBanner({
 
   const swipePrevious = () => {
     if (index.current - 1 < 0) {
-      index.current += 3;
+      index.current += slides.length - 1;
       setMargin(`0 0 0 -${(index.current % slides.length) * 100}%`);
     } else {
       index.current--;
