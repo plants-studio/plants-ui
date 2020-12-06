@@ -14,7 +14,7 @@ export type ProgressProps = {
 
 /** `Progress` 는 기본적인 프로그래스바 입니다. */
 function Progress({
-  percentage = 0,
+  percentage,
   width = "100%",
   color = "#f23c4c",
   height = "0.5rem",
@@ -55,6 +55,7 @@ const fillStyle = css`
   height: 100%;
   background: red;
   opacity: 1;
+  transition: 150ms;
 `;
 
 export default Progress;

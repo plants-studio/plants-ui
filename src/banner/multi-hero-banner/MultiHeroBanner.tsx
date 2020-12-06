@@ -27,34 +27,55 @@ function MultiHeroBanner({
   height = "25rem",
   bannerData,
 }: MultiHeroBannerProps) {
+  const index = useRef(0);
+  const time = useRef(0);
+  const [percentage, setPercentage] = useState(0);
   const [margin, setMargin] = useState("0");
-  const index = useRef(1);
   const [sliderWidth, setSliderWidth] = useState("");
   const [slideWidth, setSlideWidth] = useState("");
   const slides = document.getElementsByClassName("slide");
 
-  const imageSwipe = () => {
-    setMargin(`0 0 0 -${(index.current % slides.length) * 100}%`);
-    index.current++;
-  };
-
   useEffect(() => {
     setSliderWidth(`${(slides.length + 1) * 100}%`);
     setSlideWidth(`${100 / (slides.length + 1)}%`);
-    setInterval(imageSwipe, 5000);
+    setInterval(imageSwipe, 100);
   }, []);
 
-  const swipePrevious = () => {};
+  const imageSwipe = () => {
+    if (time.current === 100) {
+      time.current = 0;
+      index.current++;
+      setMargin(`0 0 0 -${(index.current % slides.length) * 100}%`);
+    } else {
+      time.current++;
+      setPercentage(time.current);
+    }
+  };
 
-  const swipeNext = () => {};
+  const swipePrevious = () => {
+    if (index.current - 1 < 0) {
+      index.current += 3;
+      setMargin(`0 0 0 -${(index.current % slides.length) * 100}%`);
+    } else {
+      index.current--;
+      setMargin(`0 0 0 -${(index.current % slides.length) * 100}%`);
+    }
+    time.current = 0;
+  };
+
+  const swipeNext = () => {
+    index.current++;
+    setMargin(`0 0 0 -${(index.current % slides.length) * 100}%`);
+    time.current = 0;
+  };
 
   return (
     <div css={[bannerStyle, { width }, { height }]}>
       <div css={imageSliderStyle}>
-        <div css={[imageSlidesStyle, `width: ${sliderWidth};`, { margin }]}>
+        <div css={[imageSlidesStyle, { width: sliderWidth, margin }]}>
           {bannerData.map((data, i) => (
             <div
-              css={[imageSlideStyle, `width: ${slideWidth}`]}
+              css={[imageSlideStyle, { width: slideWidth }]}
               className="slide"
               key={i}
             >
@@ -64,9 +85,9 @@ function MultiHeroBanner({
         </div>
       </div>
       <div css={textSliderWrapperStyle}>
-        <div css={[textSliderStyle, `width: ${sliderWidth};`, { margin }]}>
+        <div css={[textSliderStyle, { width: sliderWidth, margin }]}>
           {bannerData.map((data, i) => (
-            <div css={[textSlideStyle, `width: ${slideWidth}`]} key={i}>
+            <div css={[textSlideStyle, { width: slideWidth }]} key={i}>
               <span>
                 <ContentType>{data.contentType}</ContentType>
                 <Header size="medium">{data.header}</Header>
@@ -78,7 +99,7 @@ function MultiHeroBanner({
           ))}
         </div>
         <div css={ProgressAreaStyle}>
-          <Progress percentage={50} color="#f23c4c" width="80%" />
+          <Progress percentage={percentage} color="#f23c4c" width="80%" />
           <ChevronButton themeType="chevronLeft" onClick={swipePrevious} />
           <ChevronButton themeType="chevronRight" onClick={swipeNext} />
         </div>
