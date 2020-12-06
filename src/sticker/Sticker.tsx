@@ -45,7 +45,7 @@ const defaultStyle = css`
   font-size: 1rem;
   font-weight: bold;
   color: white;
-  z-index: 99;
+  z-index: 90;
 `;
 
 export default Sticker;
